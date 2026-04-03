@@ -1,0 +1,167 @@
+/* Основные настройки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.fadeIn {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    animation: slideUp 1s ease-in-out;
+}
+
+.slideUp {
+    transform: translateY(20px);
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    color: #333;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: zoomIn 1s ease-in-out;
+}
+
+.zoomIn {
+    transform: scale(0.9);
+    animation: zoomIn 1s forwards;
+}
+
+@keyframes zoomIn {
+    to {
+        transform: scale(1);
+    }
+}
+
+nav a {
+    float: right;
+    color: #fff;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgba(51, 51, 51, 1);
+}
+
+.hidden {
+    display: none;
+}
+
+.filter-panel {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+form input[type="text"],
+form textarea,
+form input[type="date"] {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.notes-list ul {
+    list-style-type: none;
+    padding-left: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.notes-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease-in-out;
+}
+
+.notes-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.notes-list li span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    /* Адаптация дизайна под мобильные устройства */
+    body {
+        font-size: 14px;
+    }
+    header h1 {
+        font-size: 1.5em;
+    }
+    .container {
+        padding: 10px;
+    }
+}

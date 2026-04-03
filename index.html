@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заметки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Менеджер финансов</h1>
+    <!-- Панель фильтра -->
+    <div class="filter-panel">
+        <input type="text" id="searchTerm" placeholder="Поиск...">
+        <label for="startDate">Начало:</label>
+        <input type="date" id="startDate">
+        <label for="endDate">Окончание:</label>
+        <input type="date" id="endDate">
+        <button onclick="searchNotes()">Искать</button>
+        <button onclick="showAllNotes()">Показать все</button>
+    </div>
+    
+    <!-- Форма добавления новых заметок -->
+    <form id="newNoteForm">
+        <input type="text" id="noteTitle" placeholder="Название заметки">
+        <textarea id="noteContent" rows="4" cols="50" placeholder="Содержание"></textarea>
+        <input type="datetime-local" id="noteDate" placeholder="Дата события">
+        <button type="submit">Создать заметку</button>
+    </form>
+    
+    <!-- Список заметок -->
+    <ul id="notesList"></ul>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
